@@ -1,15 +1,11 @@
 ﻿using OfficeOpenXml;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Automation;
 
 namespace ExcelTest
 {
@@ -23,6 +19,7 @@ namespace ExcelTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ExcelUtilities.LoadExcelToDataGridView("C:\\Users\\hassi\\OneDrive\\Documents\\documents 2\\stations\\BDD SS EN ACTIVITE -30-01-2023 DP DE SAFI.xlsx", dataGridView1);
             // create excel
             using (ExcelPackage excelPackage = new ExcelPackage())
             {
